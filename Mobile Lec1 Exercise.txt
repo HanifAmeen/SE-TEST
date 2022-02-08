@@ -1,0 +1,22 @@
+fun main() {
+   var list:MutableList<Int> = mutableListOf() 
+   
+    
+   repeat(6){
+   		var number = randomBtw(1,49)
+   		while(number in list){
+            number = randomBtw(1,49)
+        }
+        	
+    	if(number !in list)
+    		list.add(number)
+   }
+   	
+        
+   print(list)
+} 
+
+fun randomBtw(num1:Int, num2:Int) : Int {
+    var result :Int = (Math.random()*(num2-num1+1)).toInt() + num1
+    return result
+}
